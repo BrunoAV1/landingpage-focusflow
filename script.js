@@ -23,7 +23,7 @@ if (setaDir) setaDir.addEventListener('click', proximoDepoimento);
 if (setaEsq) setaEsq.addEventListener('click', anteriorDepoimento);
 setInterval(proximoDepoimento, 4000); // Troca a cada 4 segundos
 
-// Efeito de animação ao rolar (scroll reveal)
+// Efeito de animação ao rolar 
 const animarAoRolar = () => {
   const elementos = document.querySelectorAll('.card, .hero-text, .hero-img');
   const trigger = window.innerHeight * 0.85;
@@ -45,7 +45,7 @@ if (btnMenu && navUl) {
   btnMenu.addEventListener('click', () => {
     navUl.classList.toggle('ativo');
   });
-  // Fecha o menu ao clicar em um link
+  
   navUl.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       navUl.classList.remove('ativo');
@@ -53,7 +53,7 @@ if (btnMenu && navUl) {
   });
 }
 
-// 1. Animação de digitação no título
+
 const titulo = document.querySelector('.hero-text h1');
 if (titulo) {
   const texto = titulo.textContent;
@@ -69,7 +69,7 @@ if (titulo) {
   digitar();
 }
 
-// 2. Parallax no mockup
+//  Parallax no mockup
 const heroImg = document.querySelector('.hero-img img');
 window.addEventListener('mousemove', e => {
   if (window.innerWidth > 900 && heroImg) {
@@ -82,7 +82,7 @@ window.addEventListener('mouseleave', () => {
   if (heroImg) heroImg.style.transform = '';
 });
 
-// 3. Tilt nos cards
+//  Tilt nos cards
 const cards = document.querySelectorAll('.card');
 cards.forEach(card => {
   card.addEventListener('mousemove', e => {
@@ -100,7 +100,7 @@ cards.forEach(card => {
   });
 });
 
-// 4. Ripple nos botões
+
 function criarRipple(e) {
   const btn = e.currentTarget;
   const circle = document.createElement('span');
@@ -116,7 +116,7 @@ document.querySelectorAll('.btn').forEach(btn => {
   btn.addEventListener('click', criarRipple);
 });
 
-// 5. Scroll suave
+
 const links = document.querySelectorAll('nav a[href^="#"], .btn[href^="#"]');
 links.forEach(link => {
   link.addEventListener('click', function(e) {
@@ -128,7 +128,7 @@ links.forEach(link => {
   });
 });
 
-// 6. Destaque animado no depoimento ativo
+
 function animarDepoimentoAtivo() {
   document.querySelectorAll('.depoimento').forEach(dep => {
     dep.classList.remove('zoom');
@@ -138,7 +138,7 @@ function animarDepoimentoAtivo() {
 }
 setInterval(animarDepoimentoAtivo, 400);
 
-// 7. Dark mode
+
 const darkBtn = document.createElement('button');
 darkBtn.className = 'dark-toggle';
 darkBtn.innerHTML = '🌙';
