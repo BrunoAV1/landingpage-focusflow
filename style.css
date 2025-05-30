@@ -421,7 +421,7 @@ body.dark .dark-toggle {
   align-items: stretch;
 }
 
-/* Novo layout do footer */
+
 .footer-flex {
   display: flex;
   flex-wrap: wrap;
@@ -537,7 +537,7 @@ body.dark footer .footer-col:not(:last-child) {
   }
 }
 
-/* Header links - garantir contraste no dark mode */
+
 body.dark nav a {
   color: #f7f9fb;
 }
@@ -545,7 +545,7 @@ body.dark nav a:hover {
   color: #6c63ff;
 }
 
-/* Depoimentos e cards mais bonitos no mobile */
+
 @media (max-width: 600px) {
   .carousel {
     flex-direction: row;
